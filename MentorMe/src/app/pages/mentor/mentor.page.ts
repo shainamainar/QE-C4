@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 @Component({
   selector: 'app-mentor',
   templateUrl: './mentor.page.html',
   styleUrls: ['./mentor.page.scss'],
 })
-export class MentorPage implements OnInit {
+export class MentorPage {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  navToMentorLogin() {
+    this.router.navigate(['/mentor-login']);
+  }
+
+  navToMentorSignUp() {
+    this.router.navigate(['/mentor-signin']);
   }
 
 }
