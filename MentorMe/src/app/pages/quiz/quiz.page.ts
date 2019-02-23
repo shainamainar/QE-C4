@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-quiz',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizPage implements OnInit {
 
-  constructor() { }
+  constructor(private toast: ToastController) {
+  }
 
   ngOnInit() {
   }
-
+  async presentToast() {
+    const toast = await this.toast.create({
+      message: 'ADDED TO THE DATABASE Y\'ALL.',
+      duration: 2000
+    });
+    toast.present();
+  }
 }

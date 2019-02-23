@@ -1,9 +1,51 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>quiz</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="{{ back }}"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="center-back-button">Questionnaire</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
+  
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="f">Female</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+        <ion-select-option value="prefer not to answer">Prefer not to answer</ion-select-option>
+      </ion-select>
+    </ion-item>
 
+    <ion-item>
+      <ion-label>Field of Interest</ion-label>
+      <ion-select value="" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="computer science">Computer Science</ion-select-option>
+        <ion-select-option value="BS/BA stuff">BS stuff</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Location Matter?</ion-label>
+      <ion-select value="" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="yes">Yes</ion-select-option>
+        <ion-select-option value="no">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Do you like to code?</ion-label>
+      <ion-select value="" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="yes">Yes</ion-select-option>
+        <ion-select-option value="no">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button expand="full" (click)="presentToast()">
+    Submit-desu
+  </ion-button>
 </ion-content>

@@ -19,6 +19,10 @@ export class MentorSigninPage {
     toast.present();
   }
 
+  navToQuiz() {
+    this.router.navigate(['/quiz']);
+  }
+
 
 
 }
