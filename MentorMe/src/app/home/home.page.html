@@ -1,29 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title class="center">
-      MentorMe
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content padding>
+
+<ion-content class="center" padding>
   <ion-grid>
+      <ion-img style="margin:auto;margin-top:30px;width:70%;"  src="/assets/icon/logo.png"></ion-img>
     <ion-row>
       <ion-col>
-        <ion-title class="center">Getting Started</ion-title>
+        <ion-title style="margin-top:100px;" class="center">I am a . . .</ion-title>
       </ion-col>
     </ion-row>
     <ion-row>
+    
       <ion-col>
-        <ion-button 
-          expand="full"
+        <ion-button style="min-width:200px; margin-top:50px;"
+          expand ="full"
           (click)="navToMentor()">
           Mentor
         </ion-button>
       </ion-col>
       <ion-col>
-        <ion-button 
-          expand="full"
+        <ion-button style="min-width:150px; margin-top:20px;"
+        expand ="full"
           (click)="navToStudent()">
           Student
         </ion-button>
