@@ -1,33 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="center">
-      MentorMe
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="{{ back }}"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="center-back-button">Mentor Signup</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-title class="center">Getting Started</ion-title>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-button 
-          expand="full"
-          (click)="navToMentor()">
-          Mentor
-        </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button 
-          expand="full"
-          (click)="navToStudent()">
-          Student
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-input placeholder="FIRST NAME"></ion-input>
+  <hr>
+  <ion-input placeholder="LAST NAME"></ion-input>
+  <hr>
+  <ion-input placeholder="USERNAME"></ion-input>
+  <hr>
+  <ion-input placeholder="PASSWORD"></ion-input>
+  <hr>
+  <ion-button expand="full" (click)="presentToast()">
+    SIGNUP
+  </ion-button>
 </ion-content>
+
