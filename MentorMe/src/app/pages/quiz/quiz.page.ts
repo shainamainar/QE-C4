@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quiz',
@@ -8,7 +9,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class QuizPage implements OnInit {
 
-  constructor(private toast: ToastController) {
+  constructor(private router: Router, private toast: ToastController) {
   }
 
   ngOnInit() {
@@ -19,5 +20,9 @@ export class QuizPage implements OnInit {
       duration: 2000
     });
     toast.present();
+  }
+
+  navToHome() {
+    this.router.navigate(['/home']);
   }
 }
